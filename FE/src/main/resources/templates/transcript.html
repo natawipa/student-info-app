@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <div class="my_header">
+        <img class="my_logo" src="images/bitcoin.gif">
+        <h1 class="my_h1">Student Information System</h1>
+      </div>
+      <div class="topnav">
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/register}">Register</a>
+        <a th:href="@{/login}">Login</a>
+      </div>
+      <div class="my_section2">
+        <h1 th:text="${studentmessage}">Student Transcripts</h1>
+        <table class="my_table1" border="1px">
+          <tr> 
+            <th>Year</th> 
+            <th>GPA</th> 
+          </tr>
+          <div  th:each="transcript : ${alltranscripts}">
+            <tr>
+              <td><span th:text="${transcript.year}">Year</span></td>
+              <td><span th:text="${transcript.GPA}">GPA</span></td>
+            </tr>
+          </div>
+        </table>
+      </div>    
+</body>
+</html>

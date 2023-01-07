@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+  <div class="my_header">
+    <img class="my_logo" src="images/bitcoin.gif">
+    <h1 class="my_h1">Student Information System</h1>
+  </div>
+  <div class="topnav">
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/register}">Register</a>
+    <a th:href="@{/login}">Login</a>
+  </div>
+  <div class="my_section1">
+    <div class="my_form_register">
+      <h1>Register Student</h1>
+      <form action="#" th:action="@{/register}" method="POST">
+      <label for="inputId">Id</label>
+      <input type="text" name="id" id="inputId">
+      <label for="inputName">Name</label>
+      <input type="text" name="name" id="inputName">
+      <label for="inputPsw">Password</label>
+      <input type="password" name="psw" id="inputPsw">
+      <label for="school">School</label>
+      <select id="school" name="school">
+        <option value="ABS">ABS</option>
+        <option value="APIS">APIS</option>
+        <option value="CMIS">CMIS</option>
+        <option value="SIBS">SIBS</option>
+      </select>
+    <input type="submit" value="Register">
+    </form>
+  </div>
+</div>
+<div class="my_section2">
+  <h1>All Students</h1>
+  <table class="my_table1" border="1px">
+    <tr> 
+      <th>Id</th> 
+      <th>Name</th> 
+      <th>Password</th> 
+    </tr>
+    <div  th:each="student : ${allStudents}">
+      <tr>
+        <td><span th:text="${student.id}">Id</span></td>
+        <td><span th:text="${student.name}">Name</span></td>
+        <td><span th:text="${student.psw}">Password</span></td>
+      </tr>
+    </div>
+  </table>
+</div>
+</body>
+</html>
+

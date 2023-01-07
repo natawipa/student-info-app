@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"> 
+<head>
+    <meta charset="UTF-8"> <title>Home</title>
+    <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+    <div class="my_header">
+        <img class="my_logo" src="images/bitcoin.gif">
+        <h1 class="my_h1" th:text="${greeting}">Hello World!</h1>
+    </div> 
+    <div class="topnav">
+        <a th:href="@{/home}">Home</a>
+        <a th:href="@{/register}">Register</a>
+        <a th:href="@{/login}">Login</a>
+    </div>
+</body> 
+</html>

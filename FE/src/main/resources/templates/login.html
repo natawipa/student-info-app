@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+
+<body>
+  <div class="my_header">
+    <img class="my_logo" src="images/bitcoin.gif">
+    <h1 class="my_h1">Student Information System</h1>
+  </div>
+  <div class="topnav">
+    <a th:href="@{/home}">Home</a>
+    <a th:href="@{/register}">Register</a>
+    <a th:href="@{/login}">Login</a>
+  </div>
+<div class="my_section2">
+  <div class="my_form_login">
+    <h1>Login</h1>
+    <form th:action="@{/login}" method="POST">
+      <label for="inputId">User ID</label>
+      <input type="text" id="inputId" name="id" placeholder="Your user id..">
+  
+      <label for="inputPsw">Password</label>
+      <input type="password" id="inputPsw" name="psw" placeholder="Your passowrd..">
+    
+      <input type="submit" value="Login">
+    </form>
+  </div>
+</div>
+</body>
+</html>

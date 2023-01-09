@@ -1,7 +1,11 @@
 # student-info-app
 student infomation using Java `Spring Boot`
 
-## Get list of Things
+
+
+# API LIST
+
+## Get list of transcript
 
 ### Request
 
@@ -45,7 +49,7 @@ student infomation using Java `Spring Boot`
     ]
 ```
 
-### Get a specific Thing
+### Get transcript by id
 
 ### Request
 
@@ -63,7 +67,7 @@ student infomation using Java `Spring Boot`
     }
 ```
 
-## Change a Thing's state
+## Update transcript
 
 ### Request
 
@@ -87,7 +91,7 @@ student infomation using Java `Spring Boot`
     }
 ```
 
-## Change a Thing using the _method hack
+## Create new transcript
 
 ### Request
 
@@ -111,7 +115,7 @@ student infomation using Java `Spring Boot`
     }
 ```
 
-## Delete a Thing
+## Delete a transcript
 
 ### Request
 

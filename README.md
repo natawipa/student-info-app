@@ -11,14 +11,38 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
 
 ### Response
 
-    HTTP/1.1 200 OK
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 200 OK
-    Connection: close
-    Content-Type: application/json
-    Content-Length: 2
-
-    []
+    [
+        {
+            "tranId": 1,
+            "studentId": 1,
+            "year": "2566",
+            "gpa": 4.0
+        },
+        {
+            "tranId": 2,
+            "studentId": 1,
+            "year": "2561",
+            "gpa": 3.6
+        },
+        {
+            "tranId": 3,
+            "studentId": 1,
+            "year": "2562",
+            "gpa": 3.99
+        },
+        {
+            "tranId": 4,
+            "studentId": 1,
+            "year": "2563",
+            "gpa": 3.99
+        },
+        {
+            "tranId": 5,
+            "studentId": 1,
+            "year": "2565",
+            "gpa": 4.0
+        }
+    ]
 ### Get a specific Thing
 
 ### Request

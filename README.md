@@ -7,10 +7,10 @@ student infomation using Java `Spring Boot`
 
 `GET /transcript`
 
-curl --location --request GET 'http://localhost:8090/api/transcript'
+    curl --location --request GET 'http://localhost:8090/api/transcript'
 
 ### Response
-
+```json
     [
         {
             "tranId": 1,
@@ -43,6 +43,8 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
             "gpa": 4.0
         }
     ]
+```
+
 ### Get a specific Thing
 
 ### Request
@@ -52,8 +54,14 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
     curl --location --request GET 'http://localhost:8090/api/transcript/1'
 
 ### Response
-
-    {"tranId":1,"studentId":1,"year":"2566","gpa":3.99}
+```json
+    {
+        "tranId": 1,
+        "studentId": 1,
+        "year": "2566",
+        "gpa": 3.99
+    }
+```
 
 ## Change a Thing's state
 
@@ -70,13 +78,14 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
     }'
 
 ### Response
-
+```json
     {
     "tranId": 1,
     "studentId": 1,
     "year": "2566",
     "gpa": 4.0
     }
+```
 
 ## Change a Thing using the _method hack
 
@@ -93,13 +102,14 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
     }'
 
 ### Response
-
+```json
     {
         "tranId": 6,
         "studentId": 1,
         "year": "2564",
         "gpa": 4.0
     }
+```
 
 ## Delete a Thing
 
@@ -107,4 +117,14 @@ curl --location --request GET 'http://localhost:8090/api/transcript'
 
 `DELETE /transcript/id`
 
-    curl --location --request DELETE 'http://localhost:8090/api/transcript/6'
+    curl --location --request DELETE 'http://localhost:8090/api/transcript/5'
+
+### Response
+```json
+    {
+    "tranId": 5,
+    "studentId": 1,
+    "year": "2565",
+    "gpa": 4.0
+    }
+```
